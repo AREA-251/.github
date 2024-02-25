@@ -28,6 +28,13 @@ input {
   color: var(--textColor);
 }
 
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   font-size: 16px;
   margin: 2.5em;
@@ -120,7 +127,6 @@ body {
   align-items: center; 
   justify-content: space-around;
   position: relative;
-  /* background: yellow; */
 }
 
 h1 {
@@ -128,18 +134,7 @@ h1 {
   transform: translateY(-50%);
   font-size: min(6.5vw, 6.5vh);
   color: transparent;
-  /* text-shadow: 
-    0.4em 0 rgba(150, 150, 150, 0.4),
-    0.8em 0 rgba(150, 150, 150, 0.3),
-    1.2em 0 rgba(150, 150, 150, 0.2),
-    1.6em 0 rgba(150, 150, 150, 0.1),
-    -0.4em 0 rgba(150, 150, 150, 0.4),
-    -0.8em 0 rgba(150, 150, 150, 0.3),
-    -1.2em 0 rgba(150, 150, 150, 0.2),
-    -1.6em 0 rgba(150, 150, 150, 0.1)
-  ; */
 
-  // text shadow transition
   /* transition: text-shadow 0.9s; */
   animation: blur 0.9s forwards;
 }
@@ -195,7 +190,7 @@ h1:not(:has(~ .container > .text > .link:hover)) {
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 16px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -205,7 +200,7 @@ h1:not(:has(~ .container > .text > .link:hover)) {
 @media (min-width: 1024px) {
   .container {
     justify-content: flex-start;
-    padding-bottom: 24px; // equivalent to lg:pb-6 
+    padding-bottom: 24px;
   }
 }
 
@@ -220,11 +215,11 @@ h1:not(:has(~ .container > .text > .link:hover)) {
 .link {
   display: flex;
   align-items: center;
-  border-radius: 0.5rem; // equivalent to rounded-lg
-  padding: 2px 8px; // equivalent to px-2, py-0.5
+  border-radius: 0.5rem;
+  padding: 2px 8px;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.3); // equivalent to text-white/30
+  color: rgba(255, 255, 255, 0.3);
   position: relative;
   text-decoration: none;
   transition: color 0.2s;
@@ -232,7 +227,7 @@ h1:not(:has(~ .container > .text > .link:hover)) {
 }
 
 .link:hover {
-  color: #0ea5e9; // equivalent to hover:text-sky-300
+  color: #0ea5e9;
 }
 
 .background {
