@@ -1,4 +1,4 @@
-## [AREA 51][site]
+## [lostflux][site]
 
 [![Area 51](./profile/lostflux.jpeg)][site]
 
